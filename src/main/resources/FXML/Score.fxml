@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      onMouseClicked="#resetFocus" prefHeight="630.0" prefWidth="1000.0" stylesheets="@../CSS/style.css"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ScoreSystem">
+
+
+    <Button layoutX="410.0" layoutY="180.0" mnemonicParsing="false" onMouseClicked="#showBestPlayers"
+            prefHeight="45.0" prefWidth="180.0" styleClass="button" text="Best Players"/>
+    <Button layoutX="410.0" layoutY="320.0" mnemonicParsing="false" onMouseClicked="#showBestKillers"
+            prefHeight="45.0" prefWidth="180.0" styleClass="button" text="Best Killer"/>
+    <Button layoutX="410.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#showLastWave"
+            prefHeight="45.0" prefWidth="180.0" styleClass="button" text="Last Wave Scores"/>
+    <Button layoutX="410.0" layoutY="390.0" mnemonicParsing="false" onMouseClicked="#showBestShooter"
+            prefHeight="45.0" prefWidth="180.0" styleClass="button" text="Best Shooter"/>
+
+    <Button layoutX="860.0" layoutY="550.0" mnemonicParsing="false" onMouseClicked="#back"
+            prefHeight="45.0" prefWidth="90.0" styleClass="sensitive" text="Back"/>
+
+    <TableView fx:id="table" layoutX="329.0" layoutY="66.0" prefHeight="508.0" prefWidth="342.0"
+               visible="false">
+        <columns>
+            <TableColumn fx:id="usernameColumn" prefWidth="168.0" text="Username"/>
+            <TableColumn fx:id="dataColumn" prefWidth="173.33334350585938" text="Number of Wins"/>
+        </columns>
+    </TableView>
+
+</Pane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      onMouseClicked="#resetFocus" prefHeight="630.0" prefWidth="1000.0" stylesheets="@../CSS/style.css"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SettingsSystem">
+
+    <Button layoutX="860.0" layoutY="550.0" mnemonicParsing="false" onMouseClicked="#back"
+            prefHeight="45.0" prefWidth="90.0" styleClass="sensitive" text="Done"/>
+
+    <ImageView fitHeight="55.0" fitWidth="51.0" layoutX="316.0" layoutY="159.0" pickOnBounds="true"
+               preserveRatio="true">
+        <Image url="@../Images/ic_settings.png"/>
+    </ImageView>
+
+    <ComboBox fx:id="combo" layoutX="380.0" layoutY="160.0" prefHeight="50.0"
+              prefWidth="240.0" promptText="Choose Game Level">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="easy"/>
+                <String fx:value="medium"/>
+                <String fx:value="hard"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <CheckBox fx:id="muteMusicBox" layoutX="405.0" layoutY="250.0" mnemonicParsing="false"
+              prefHeight="50.0" prefWidth="190.0" text="Mute Music"/>
+    <CheckBox fx:id="noColorBox" layoutX="405.0" layoutY="320.0" mnemonicParsing="false"
+              prefHeight="50.0" prefWidth="190.0" text="No Color"/>
+    <CheckBox fx:id="useArrowsBox" layoutX="405.0" layoutY="390.0" mnemonicParsing="false"
+              prefHeight="50.0" prefWidth="190.0" text="Use Arrows"/>
+</Pane>

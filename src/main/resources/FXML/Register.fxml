@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      onMouseClicked="#resetFocus" prefHeight="630.0" prefWidth="1000.0" stylesheets="@../CSS/style.css"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RegisterSystem">
+
+    <Label layoutX="46.0" layoutY="113.0"
+           text="Welcome! Please login. If you don't have&#10;an account, sign up or use guest mode."/>
+
+    <TextField fx:id="username" layoutX="125.0" layoutY="190.0" prefHeight="35.0" prefWidth="170.0"
+               promptText="Username"/>
+
+    <PasswordField fx:id="password" layoutX="125.0" layoutY="240.0" prefHeight="35.0" prefWidth="170.0"
+                   promptText="Password"/>
+
+    <Button layoutX="215.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#signUp" prefHeight="35.0"
+            prefWidth="80.0" styleClass="smallButton" text="Sign Up"/>
+
+    <Button layoutX="125.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="35.0"
+            prefWidth="80.0" styleClass="smallButton" text="Login"/>
+
+    <Button layoutX="155.0" layoutY="345.0" mnemonicParsing="false" onMouseClicked="#guestEnter" prefHeight="35.0"
+            prefWidth="110.0" styleClass="smallButton" text="Guest Mode"/>
+
+    <Label layoutX="63.0" layoutY="51.0" style="-fx-font-size: 45;" text="Atomic Bomber"/>
+</Pane>

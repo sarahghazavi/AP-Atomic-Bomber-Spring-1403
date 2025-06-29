@@ -1,0 +1,12 @@
+{
+  "password": "sara",
+  "wave": 0,
+  "kill": 0,
+  "xKill": 0,
+  "shoot": 0,
+  "xShoot": 0,
+  "music": true,
+  "color": true,
+  "arrow": true,
+  "level": "easy"
+}

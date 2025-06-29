@@ -17,6 +17,14 @@ public class ProfileSystem {
     }
 
     public void changeUsername() {
+        if (Data.getCurrentUsername().equals("guest")) {
+            Data.alert(Alert.AlertType.ERROR, "Change Username",
+                    "You can't change username as a guest!",
+                    "Please login and try again.");
+            resetFocus();
+            return;
+        }
+
         while (true) {
             TextInputDialog dialog = new TextInputDialog();
             dialog.setTitle("Change Username");
@@ -44,12 +52,20 @@ public class ProfileSystem {
                             "Username has changed successfully!", "");
                 }
             }
-            pane.requestFocus();
+            resetFocus();
             break;
         }
     }
 
     public void changePassword() {
+        if (Data.getCurrentUsername().equals("guest")) {
+            Data.alert(Alert.AlertType.ERROR, "Change Username",
+                    "You can't change password as a guest!",
+                    "Please login and try again.");
+            resetFocus();
+            return;
+        }
+
         while (true) {
             TextInputDialog dialog = new TextInputDialog();
             dialog.setTitle("Change Password");
@@ -73,7 +89,7 @@ public class ProfileSystem {
                             "Password has changed successfully!", "");
                 }
             }
-            pane.requestFocus();
+            resetFocus();
             break;
         }
     }

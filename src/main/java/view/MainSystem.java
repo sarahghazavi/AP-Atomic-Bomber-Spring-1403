@@ -64,7 +64,10 @@ public class MainSystem {
         alert.setHeaderText("You will be logged out!");
         alert.setContentText("");
         alert.showAndWait();
-        if (alert.getResult().getButtonData().isCancelButton()) return;
+        if (alert.getResult().getButtonData().isCancelButton()) {
+            resetFocus();
+            return;
+        }
 
         if (Data.getCurrentUsername().equals("guest")) UserController.deleteUser("guest");
         Data.setCurrentUsername("");
